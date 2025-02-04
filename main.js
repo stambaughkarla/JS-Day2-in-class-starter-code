@@ -1,11 +1,11 @@
 /////// Variables Section ///////
-const myName = "Clint Tuttle"
+const myName = "Karla Stambaugh"
 const fruits = ['apples', 'bananas', 'blueberries', 'strawberries', 'pineapples'];
 const car = [{make:"Toyota", model:"Prius", color:"Silver"},
              {make:"Chevy", model:"Bolt", color:"Blue"}, 
              {make:"Honda", model:"Civic", color:"White"}];
 const today = new Date();
-const loggedIn = true;
+const loggedIn = false;
 
 
 
@@ -42,16 +42,12 @@ testLet();
 // When you are done with this section you can comment out the console.logs above
 
 
-
-
-
-
 //////// PART 2 - template literals////////
 const result2Element = document.getElementById('result2');
 
 ////starter code////
 //update code below to using template literals (not concatenation) to pull in the variables myName, color, make, into output
-result2Element.innerHTML = "Hello my name is {yourname} and I drive a {White Honda Civic}";
+result2Element.innerHTML = `Hello my name is ${myName}! and I drive a ${car[1].make}`;
 
 
 //Footer Section
@@ -65,16 +61,11 @@ footerElement.innerHTML = "&copy; Clint Tuttle 2024";
 
 //////// PART 3 - Ternary Operator////////
 ////section 1 - basic if else statement
-if (loggedIn) {
-    const result3Element = document.getElementById('result3');
-    result3Element.innerHTML = "Welcome back!";
-} else {
-    const result3Element = document.getElementById('result3');
-    result3Element.innerHTML = "Please log in";
-}
+
 
 ////Sample code.  You can uncomment this to see how simple a ternaly operator can be
-// loggedIn ? alert("welcome back") : alert("please log in");
+const result3Element = document.getElementById('result3');
+loggedIn ? result3Element.innerHTML = "Welcome Back" : result3Element.innerHTML = "Please Log In!";
 
 ////section 2 -ternary operator to update the result3Element
 
@@ -83,33 +74,21 @@ if (loggedIn) {
 
 
 //////// PART 4 - Arrow Functions////////
-function Greetings(name) {
-    return `Hello ${name}!`;
-};
-
-console.log(Greetings("Clint"));
 
 //Make a copy of the above function and rename it GreetingsArrow() and then convert function to an arrow function here
  
-
+const Greetings = (name) => `Hello ${name}!`;
+console.log(Greetings(myName));
 
 
 //////// PART 5 - Array methods////////
 function printFruit() {
-
     let resultElement = document.getElementById("result5");
-
     resultElement.textContent = "";
-
-    // Loop through the fruits array
-    for (let i = 0; i < fruits.length; i++) {
- 
-        // Create a list item for each fruit
-        let p = document.createElement("p");
-        p.textContent = fruits[i];
-
-        // Append the list item to the ordered list
-        resultElement.appendChild(p);
+    fruits.forEach(myitems);
+    function myitems(Item) {
+      resultElement.textContent += "" + `${Item}`;
+      
     }
 
  }
