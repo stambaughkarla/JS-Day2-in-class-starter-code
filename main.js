@@ -96,7 +96,7 @@ function printFruit() {
  
  function clearText() {
     let resultElement = document.getElementById("result5");
-    resultElement.textContent = "";
+    resultElement.textContent = " ";
  }
 
 
