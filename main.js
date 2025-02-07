@@ -58,7 +58,6 @@ footerElement.innerHTML = "&copy; Clint Tuttle 2024";
 
 
 
-
 //////// PART 3 - Ternary Operator////////
 ////section 1 - basic if else statement
 
@@ -66,11 +65,6 @@ footerElement.innerHTML = "&copy; Clint Tuttle 2024";
 ////Sample code.  You can uncomment this to see how simple a ternaly operator can be
 const result3Element = document.getElementById('result3');
 loggedIn ? result3Element.innerHTML = "Welcome Back" : result3Element.innerHTML = "Please Log In!";
-
-////section 2 -ternary operator to update the result3Element
-
-
-
 
 
 //////// PART 4 - Arrow Functions////////
@@ -87,7 +81,7 @@ function printFruit() {
     resultElement.textContent = "";
     fruits.forEach(myitems);
     function myitems(Item) {
-      resultElement.textContent += "" + `${Item}`;
+      resultElement.textContent += " " + `${Item}` + " ";
       
     }
 
@@ -98,8 +92,6 @@ function printFruit() {
     let resultElement = document.getElementById("result5");
     resultElement.textContent = " ";
  }
-
-
 
 
 
